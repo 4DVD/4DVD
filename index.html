@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css 模板 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    4DVD
+  </title>
+  <style>
+    /* 直接修改章节标题的间距 */
+    .video-title {
+      margin-top: 150px !important;  /* 强制设置上间距 */
+      margin-bottom: 20px !important;  /* 强制设置下间距 */
+    }
+<!--    /* 增加视频上方的间距 */-->
+<!--    .video-container {-->
+<!--      margin-top: 30px !important;  /* 强制设置视频上方的间距 */-->
+<!--    }-->
+  </style>
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- 论文标题 -->
+    <p class="title is-3"> 4DVD: Cascaded Dense-view Video Diffusion Model for High-quality 4D Content Generation </p>
+    <!-- 会议信息 -->
+    <p class="subtitle is-4"> IJCV submission</p>
+    <!-- 作者 -->
+    <p class="title is-5 mt-2">
+      Shuzhou Yang<sup>1</sup>,
+      Xiaodong Cun<sup>2</sup>,
+      Xiaoyu Li<sup>3</sup>,
+      Yaowei Li<sup>1</sup>,
+      Jian Zhang*<sup>1</sup>
+    </p>
+    <!-- 所属单位 -->
+    <p class="subtitle is-5">
+      <sup>1</sup> Peking University Shenzhen Graduate School
+      <sup>2</sup> Great Bay University
+      <sup>3</sup> Tencent
+    </p>
+
+  </div>
+
+  <!-- 主容器 -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- 摘要 -->
+    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+    <p class="content is-size-6 has-text-left">
+      Given the high complexity of directly generating high-dimensional data such as 4D, we present 4DVD, a cascaded video diffusion model that generates 4D content in a decoupled manner. Unlike previous multi-view video methods that directly model 3D space and temporal features simutaneously with stacked corss view/temporal attention modules, 4DVD decouples this into two sub-tasks: coarse novel-view generation and structure-aware conditional generation, and effectively unifies them. Specifically, given a monocular video, 4DVD first predicts the dense view content of its low-resolution version for better cross-view and temporal consistency. Then, a structure-aware spatio-temporal generation branch is developed, using the predicted dense-view videos as the coarse structural priors and the original high-quality monocular video as generation condition, generating final dense-view videos. Based on these, explicit 4D representation~(such as 4D Gaussian) can be optimized accurately, enabling wider practical application. To train 4DVD, we collect a dynamic 3D object dataset from the Objaverse benchmark and render 16 videos with 21 frames for each object. Extensive experiments demonstrate our state-of-the-art performance on both novel view synthesis and 4D generation.
+    </p>
+
+    <!-- 结果（视频） -->
+    <p class="title is-3 mt-5 has-text-centered video-title"> Demo </p>
+    <div class="video-container">
+      <video muted autoplay loop> <source src="videos/assets.mp4" type="video/mp4"> </video>
+    </div>
+
+    <p> </p>
+    <p> </p>
+
+    <p class="title is-3 mt-5 has-text-centered video-title"> Video Comparison </p>
+    <div class="video-container">
+      <video muted autoplay loop> <source src="videos/video_comparison.mp4" type="video/mp4"> </video>
+    </div>
+
+    <p> </p>
+    <p> </p>
+
+    <p class="title is-3 mt-5 has-text-centered video-title"> 4D Comparison </p>
+    <div class="video-container">
+      <video muted autoplay loop> <source src="videos/4d_comparison.mp4" type="video/mp4"> </video>
+    </div>
+
+    <!-- 引用部分 -->
+  </div>
+
+  </section>
+</body>
+</html>
